@@ -3,72 +3,50 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <TextView
-      android:text="Оценка упражнения"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:id="@+id/tvMarkTitle"
-      android:layout_gravity="center"
-      android:layout_marginBottom="10dp"
-      android:layout_marginTop="10dp" />
-  <ListView
-      android:minWidth="25px"
-      android:minHeight="25px"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:id="@+id/lvMark"
-      android:layout_marginLeft="10dp"
-      android:layout_marginRight="10dp"
-      android:layout_marginBottom="10dp" />
-  <ScrollView
-      android:minWidth="25px"
-      android:minHeight="25px"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:id="@+id/scrollView1"
-      android:layout_marginLeft="10dp"
-      android:layout_marginRight="10dp"
-      android:layout_marginBottom="10dp">
-    <TableLayout
+    <TextView
+        android:text="Оценка упражнения"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvMarkTitle"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp" />
+    <ListView
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/tlMarkParams">
-      <TableRow
-          android:id="@+id/tableRow1">
-        <TextView
-            android:text="Параметр1"
-            android:layout_column="0"
-            android:id="@+id/textView9"
-            android:layout_weight="1" />
-        <EditText
-            android:inputType="number"
-            android:layout_column="1"
-            android:id="@+id/editText1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Значение параметра1" />
-      </TableRow>
-      <TableRow
-          android:id="@+id/tableRow2">
-        <TextView
-            android:text="Параметр2"
-            android:layout_column="0"
-            android:id="@+id/textView10"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <EditText
-            android:inputType="number"
-            android:layout_column="1"
-            android:id="@+id/editText2"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Значение параметра2" />
-      </TableRow>
-    </TableLayout>
-  </ScrollView>
+        android:layout_height="wrap_content"
+        android:id="@+id/lvMark"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp" />
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/svExerciseMarks"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*"
+                android:shrinkColumns="1"
+                android:id="@+id/tlMarkParams" />
+            <Button
+                android:text="Перейти к выбору упражнения"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bGoToMenuActivity"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

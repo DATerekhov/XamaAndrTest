@@ -18,6 +18,7 @@ namespace XamaAndrTest
         private List<string> listItem;
         private ListView lvMark;
         private TableLayout tlMarkParams;
+        private Button bGoToMenuActivity;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -36,19 +37,42 @@ namespace XamaAndrTest
             lvMark.Adapter = adapter;
             lvMark.ChoiceMode = ChoiceMode.Single;
 
+            tlMarkParams = FindViewById<TableLayout>(Resource.Id.tlMarkParams);
+
             lvMark.ItemClick += delegate
             {
-                Toast.MakeText(this, lvMark.CheckedItemPosition.ToString(), ToastLength.Short).Show();
+                if (lvMark.CheckedItemPosition == 3)
+                {
+                    for (int i = 0; i < 3; i++)
+                    {
+                        var tvTemp = new TextView(this);
+                        tvTemp.SetText("Параметр", TextView.BufferType.Normal);
+
+                        var etTemp = new EditText(this);
+                        etTemp.InputType = Android.Text.InputTypes.ClassNumber;
+
+
+                        var trTemp = new TableRow(this);
+
+                        trTemp.AddView(tvTemp);
+                        trTemp.AddView(etTemp);
+
+                        tlMarkParams.AddView(trTemp);
+                    }
+                }
+                else if (tlMarkParams.ChildCount != 0)
+                {
+                    tlMarkParams.RemoveAllViews();
+                }
             };
 
-            tlMarkParams = FindViewById<TableLayout>(Resource.Id.tlMarkParams);
-            var trTemp = new TableRow(this);
-            var tvTemp = new TextView(this);
-            var etTemp = new EditText(this);
-            var tempParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent, 1);
+            bGoToMenuActivity = FindViewById<Button>(Resource.Id.bGoToMenuActivity);
 
-            trTemp.AddView(tvTemp, tempParams);
-            trTemp.AddView(etTemp, tempParams);
+            bGoToMenuActivity.Click += delegate
+            {
+                Intent intent = new Intent(this, typeof(MenuActivity));
+                StartActivity(intent);
+            };
         }
     }
 }

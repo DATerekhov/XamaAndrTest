@@ -28,6 +28,7 @@ namespace XamaAndrTest
         ArrayAdapter mRightAdapter;
         ListView mRightDrawer;
         ActionBarDrawerToggle mDrawerToggle;
+        
         //
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -42,12 +43,12 @@ namespace XamaAndrTest
 
             exerciseList = FindViewById<ListView>(Resource.Id.exerciseList);
 
-            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItemChecked, listItem);
+            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItemMultipleChoice, listItem);
             exerciseList.Adapter = adapter;
+            exerciseList.ChoiceMode = ChoiceMode.Multiple;
 
             exerciseList.ItemClick += delegate
             {
-                Toast.MakeText(this, "Nice Click!", ToastLength.Short).Show();
                 Intent intern = new Intent(this, typeof(PrepareActivity));
                 StartActivity(intern);
             };
