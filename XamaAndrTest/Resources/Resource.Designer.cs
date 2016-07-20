@@ -69,8 +69,8 @@ namespace XamaAndrTest
 			// aapt resource value: 0x7f060016
 			public const int bLogin = 2131099670;
 			
-			// aapt resource value: 0x7f060023
-			public const int bNext = 2131099683;
+			// aapt resource value: 0x7f060024
+			public const int bNext = 2131099684;
 			
 			// aapt resource value: 0x7f060017
 			public const int bNextActivityTemp = 2131099671;
@@ -84,8 +84,8 @@ namespace XamaAndrTest
 			// aapt resource value: 0x7f06001c
 			public const int clock = 2131099676;
 			
-			// aapt resource value: 0x7f060025
-			public const int downloads = 2131099685;
+			// aapt resource value: 0x7f060027
+			public const int downloads = 2131099687;
 			
 			// aapt resource value: 0x7f06000e
 			public const int editText1 = 2131099662;
@@ -129,8 +129,14 @@ namespace XamaAndrTest
 			// aapt resource value: 0x7f06000a
 			public const int scrollView1 = 2131099658;
 			
+			// aapt resource value: 0x7f060022
+			public const int scrollView2 = 2131099682;
+			
 			// aapt resource value: 0x7f060002
 			public const int svParameters = 2131099650;
+			
+			// aapt resource value: 0x7f060025
+			public const int tableLayout1 = 2131099685;
 			
 			// aapt resource value: 0x7f06000c
 			public const int tableRow1 = 2131099660;
@@ -150,8 +156,8 @@ namespace XamaAndrTest
 			// aapt resource value: 0x7f060003
 			public const int tlParameters = 2131099651;
 			
-			// aapt resource value: 0x7f060022
-			public const int tvExerciseTitle = 2131099682;
+			// aapt resource value: 0x7f060023
+			public const int tvExerciseTitle = 2131099683;
 			
 			// aapt resource value: 0x7f060001
 			public const int tvExirciseName = 2131099649;
@@ -174,8 +180,8 @@ namespace XamaAndrTest
 			// aapt resource value: 0x7f06001e
 			public const int tvStatusValue = 2131099678;
 			
-			// aapt resource value: 0x7f060024
-			public const int videoView1 = 2131099684;
+			// aapt resource value: 0x7f060026
+			public const int videoView1 = 2131099686;
 			
 			// aapt resource value: 0x7f060004
 			public const int vvExerciseVideo = 2131099652;

@@ -28,42 +28,50 @@ namespace XamaAndrTest
             SetContentView(Resource.Layout.Prepare);
             bnext = FindViewById<Button>(Resource.Id.bNext);
             videoView = FindViewById<VideoView>(Resource.Id.videoView1);
-
+            /* 
+            string pathLocal = "Assets/sport.mp4";
+            videoView.SetVideoURI(Android.Net.Uri.Parse(pathLocal));
+            videoView.SetMediaController(new MediaController(this));
+            videoView.RequestFocus();
+            videoView.Start();
+            videoView.KeepScreenOn = true;
+            */
+            
             ISurfaceHolder holder = videoView.Holder;
             holder.SetType(SurfaceType.PushBuffers);
             holder.AddCallback(this);
-            
-            var descriptor = Assets.OpenFd("sport.mp4");
+
             mediaPlayer = new MediaPlayer();
+            Android.Content.Res.AssetFileDescriptor afd = Assets.OpenFd("sport.mp4");
+            if (afd != null)
+            {
+                mediaPlayer.SetDataSource(afd.FileDescriptor, afd.StartOffset, afd.Length);
+                mediaPlayer.Prepare();
+                mediaPlayer.Start();
+            }
+            /*
+            var descriptor = Assets.OpenFd("sport.mp4");
             mediaPlayer.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
             mediaPlayer.Prepare();
             mediaPlayer.Looping = true;
+            mediaPlayer.SetScreenOnWhilePlaying(true);
             mediaPlayer.Start();
-
-            /*
+            */
             bnext.Click += delegate
             {
                 Intent intent = new Intent(this, typeof(ExerciseActivity));
                 StartActivity(intent);
-
             };
-            
-            videoView = FindViewById<VideoView>(Resource.Id.videoView1);
 
-                        //string path = "https://www.youtube.com/watch?v=__acFpEYcEM";
-            string pathLocal = "\\..\\..\\Video\\sport.mp4";
-           
-            videoView.SetVideoPath(pathLocal);
-            videoView.SetMediaController(new MediaController(this));
-            videoView.RequestFocus();
-            videoView.Start();
+        }
 
-            videoView.KeepScreenOn = true;
-            */
+        public void Surface(ISurfaceHolder holder)
+        {
+
         }
         public void SurfaceCreated(ISurfaceHolder holder)
         {
-            Console.WriteLine("SurfaceCreated");
+            Toast.MakeText(this, "SurfaceCreated", ToastLength.Short).Show();
             mediaPlayer.SetDisplay(holder);
         }
         public void SurfaceDestroyed(ISurfaceHolder holder)
@@ -76,8 +84,7 @@ namespace XamaAndrTest
         }
         public void OnPrepared(MediaPlayer player)
         {
-
+            
         }
     }
 }
- 
