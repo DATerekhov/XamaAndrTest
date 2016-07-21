@@ -41,7 +41,7 @@ namespace XamaAndrTest
 
             lvMark.ItemClick += delegate
             {
-                if (lvMark.CheckedItemPosition == 3)
+                if (lvMark.CheckedItemPosition == 3 && tlMarkParams.ChildCount == 0)
                 {
                     for (int i = 0; i < 3; i++)
                     {
@@ -59,7 +59,7 @@ namespace XamaAndrTest
                         tlMarkParams.AddView(trTemp);
                     }
                 }
-                else if (tlMarkParams.ChildCount != 0)
+                else if (lvMark.CheckedItemPosition != 3 && tlMarkParams.ChildCount != 0)
                 {
                     tlMarkParams.RemoveAllViews();
                 }
