@@ -19,6 +19,7 @@ namespace XamaAndrTest
     {
         private List<string> listItem;
         private ListView exerciseList;
+        
         //
         DrawerLayout mDrawerLayout;
         List<string> mLeftItems = new List<string>();
@@ -38,7 +39,7 @@ namespace XamaAndrTest
 
             listItem = new List<string>();
             listItem.Add("Exercise 1");
-            listItem.Add("Exercise 2");
+            listItem.Add("CardioDebug");
             listItem.Add("Exercise 3");
 
             exerciseList = FindViewById<ListView>(Resource.Id.exerciseList);
@@ -46,13 +47,26 @@ namespace XamaAndrTest
             ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItemMultipleChoice, listItem);
             exerciseList.Adapter = adapter;
             exerciseList.ChoiceMode = ChoiceMode.Multiple;
-
+            
             exerciseList.ItemClick += delegate
             {
-                Intent intern = new Intent(this, typeof(PrepareActivity));
-                StartActivity(intern);
+                switch (exerciseList.SelectedItemPosition) {
+                    case 1:
+                        {
+                            Intent intern1 = new Intent(this, typeof(CardioExerciseActivity));
+                            StartActivity(intern1);
+                            break;
+                        }
+                    default:
+                        {
+                            Intent intern = new Intent(this, typeof(CardioExerciseActivity));
+                            StartActivity(intern);
+                            break;
+                        }
+                }
+                
             };
-            //
+            // слайд меню
             mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.myDrawer);
             mLeftDrawer = FindViewById<ListView>(Resource.Id.leftListView);
             mRightDrawer = FindViewById<ListView>(Resource.Id.rightListView);

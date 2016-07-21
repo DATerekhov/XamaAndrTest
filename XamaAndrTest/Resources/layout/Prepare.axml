@@ -38,6 +38,13 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="30dp" />
+            <VideoView
+                android:layout_width="match_parent"
+                android:layout_height="198.0dp"
+                android:id="@+id/videoView1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10.0dp" />
             <ScrollView
                 android:minWidth="25px"
                 android:minHeight="25px"
@@ -46,21 +53,16 @@
                 android:id="@+id/scrollView1"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="30dp">
                 <TableLayout
                     android:minWidth="25px"
                     android:minHeight="25px"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/tableLayout1" />
+                    android:id="@+id/tlPrepareParam"
+                    android:shrinkColumns="1"
+                    android:stretchColumns="*" />
             </ScrollView>
-            <VideoView
-                android:layout_width="match_parent"
-                android:layout_height="198.0dp"
-                android:id="@+id/videoView1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="10.0dp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

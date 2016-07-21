@@ -57,6 +57,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CardioExerciseActivity.cs" />
     <Compile Include="ExerciseActivity.cs" />
     <Compile Include="ExerciseMarkActivity.cs" />
     <Compile Include="MainActivity.cs" />
@@ -87,6 +88,9 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Menu.axml" />
     <AndroidResource Include="Resources\layout\Prepare.axml" />
+    <AndroidResource Include="Resources\layout\CardioExercise.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">

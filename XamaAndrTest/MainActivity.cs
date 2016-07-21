@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using XamaAndrTest.Objects;
+using Android.Views.InputMethods;
 
 namespace XamaAndrTest
 {
@@ -33,8 +34,6 @@ namespace XamaAndrTest
 
             bLogin.Click += delegate
             {
-                //button1.Text = string.Format("{0} clicks!", count++);
-
                 if ((user.Login == etLogin.Text.ToString()) && (user.Password == etPassword.Text.ToString()))
                 {
                     Toast.MakeText(this, "Nice Login!", ToastLength.Short).Show();

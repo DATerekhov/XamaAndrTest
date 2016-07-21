@@ -21,6 +21,7 @@ namespace XamaAndrTest
         private Button bnext;
         private VideoView videoView;
         private MediaPlayer mediaPlayer;
+        private TableLayout tlPrepareParam;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -28,6 +29,8 @@ namespace XamaAndrTest
             SetContentView(Resource.Layout.Prepare);
             bnext = FindViewById<Button>(Resource.Id.bNext);
             videoView = FindViewById<VideoView>(Resource.Id.videoView1);
+            tlPrepareParam = FindViewById<TableLayout>(Resource.Id.tlPrepareParam);
+
             /* 
             string pathLocal = "Assets/sport.mp4";
             videoView.SetVideoURI(Android.Net.Uri.Parse(pathLocal));
@@ -36,7 +39,7 @@ namespace XamaAndrTest
             videoView.Start();
             videoView.KeepScreenOn = true;
             */
-            
+
             ISurfaceHolder holder = videoView.Holder;
             holder.SetType(SurfaceType.PushBuffers);
             holder.AddCallback(this);
@@ -49,26 +52,30 @@ namespace XamaAndrTest
                 mediaPlayer.Prepare();
                 mediaPlayer.Start();
             }
-            /*
-            var descriptor = Assets.OpenFd("sport.mp4");
-            mediaPlayer.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
-            mediaPlayer.Prepare();
-            mediaPlayer.Looping = true;
-            mediaPlayer.SetScreenOnWhilePlaying(true);
-            mediaPlayer.Start();
-            */
+
             bnext.Click += delegate
             {
                 Intent intent = new Intent(this, typeof(ExerciseActivity));
                 StartActivity(intent);
             };
 
+            for (var i = 0; i < 2; i++)
+            {
+                var tvTemp = new TextView(this);
+                tvTemp.SetText("Кол-во подходов", TextView.BufferType.Normal);
+
+                var tvTemp2 = new TextView(this);
+                tvTemp2.SetText("100..", TextView.BufferType.Normal);
+
+                var trTemp = new TableRow(this);
+                trTemp.AddView(tvTemp);
+                trTemp.AddView(tvTemp2);
+
+                tlPrepareParam.AddView(trTemp);
+            }
+
         }
 
-        public void Surface(ISurfaceHolder holder)
-        {
-
-        }
         public void SurfaceCreated(ISurfaceHolder holder)
         {
             Toast.MakeText(this, "SurfaceCreated", ToastLength.Short).Show();

@@ -50,8 +50,7 @@ namespace XamaAndrTest
 
                         var etTemp = new EditText(this);
                         etTemp.InputType = Android.Text.InputTypes.ClassNumber;
-
-
+                        
                         var trTemp = new TableRow(this);
 
                         trTemp.AddView(tvTemp);

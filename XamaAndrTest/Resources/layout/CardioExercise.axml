@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout1"
+        android:layout_margin="10dp">
+        <TextView
+            android:text="Название кардио упражнения"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textSize="20dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout1">
+            <Button
+                android:text="Приступить"
+                android:id="@+id/bCardioBegin"
+                android:textSize="20dp"
+                android:background="@android:color/holo_green_light"
+                android:textColor="@android:color/background_light"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="10dp" />
+            <Button
+                android:text="Pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bCardioPause"
+                android:layout_alignLeft="@id/bCardioBegin"
+                android:background="@android:color/holo_green_light"
+                android:visibility="invisible"
+                android:focusable="false"
+                android:layout_margin="10dp" />
+            <Button
+                android:text="Stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bCardioStop"
+                android:visibility="invisible"
+                android:focusable="false"
+                android:layout_alignRight="@id/bCardioBegin"
+                android:gravity="center"
+                android:background="@android:color/holo_green_light"
+                android:layout_margin="10dp" />
+        </RelativeLayout>
+        <ScrollView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView1"
+            android:layout_margin="10dp">
+            <TableLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:stretchColumns="*"
+                android:shrinkColumns="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tlCardioParams" />
+        </ScrollView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTimer"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+</LinearLayout>
