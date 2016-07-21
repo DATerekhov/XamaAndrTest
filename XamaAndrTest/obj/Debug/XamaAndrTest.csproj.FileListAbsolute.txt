@@ -4,6 +4,7 @@ C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\Xama
 C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\bin\Debug\XamaAndrTest.XamaAndrTest-Signed.apk
 C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\bin\Debug\Xamarin.Android.Support.v13.dll
 C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\bin\Debug\Xamarin.Android.Support.v4.dll
+C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\obj\Debug\XamaAndrTest.csprojResolveAssemblyReference.cache
 C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\obj\Debug\XamaAndrTest.dll
 C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\obj\Debug\XamaAndrTest.pdb
 C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\obj\Debug\android\bin\XamaAndrTest.XamaAndrTest.apk
@@ -11,6 +12,7 @@ C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\Xama
 C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\obj\Debug\res\layout\exercisemark.xml
 C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\obj\Debug\res\layout\menu.xml
 C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\obj\Debug\res\layout\prepare.xml
+C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\obj\Debug\res\layout\cardioexercise.xml
 C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\obj\Debug\res\layout\main.xml
 C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\obj\Debug\res\values\strings.xml
 C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\obj\Debug\res\drawable\icon.png
@@ -19,7 +21,6 @@ C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\Xama
 C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\obj\Debug\res\menu\action_bar.xml
 C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\obj\Debug\R.cs.flag
 C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\obj\Debug\uploadflags.txt
-C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\obj\Debug\XamaAndrTest.csprojResolveAssemblyReference.cache
 C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\bin\Debug\XamaAndrTest.dll.mdb
 C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\bin\Debug\Java.Interop.dll.mdb
 C:\Users\Dmitry Terekhov\Documents\Visual Studio 2015\Projects\XamaAndrTest\XamaAndrTest\bin\Debug\Mono.Android.dll.mdb

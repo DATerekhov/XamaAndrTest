@@ -3,6 +3,8 @@
 
 # User-specific files
 *.suo
+*.dll
+*.mdb
 *.user
 *.userosscache
 *.sln.docstates

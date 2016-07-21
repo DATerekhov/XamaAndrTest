@@ -5,6 +5,7 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="XamaAndrTest" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:label="CardioExerciseActivity" android:name="md5e80443fa878603b8bd8456b487737989.CardioExerciseActivity" />
     <activity android:label="ExerciseActivity" android:name="md5e80443fa878603b8bd8456b487737989.ExerciseActivity" />
     <activity android:label="ExerciseMarkActivity" android:name="md5e80443fa878603b8bd8456b487737989.ExerciseMarkActivity" />
     <activity android:icon="@drawable/icon" android:label="MainActivity" android:name="md5e80443fa878603b8bd8456b487737989.MainActivity">
