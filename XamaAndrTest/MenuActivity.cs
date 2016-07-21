@@ -11,15 +11,14 @@ using Android.Views;
 using Android.Widget;
 using Android.Support.V4.Widget;
 using Android.Support.V4.App;
+using XamaAndrTest.Objects;
 
 namespace XamaAndrTest
 {
     [Activity(Label = "MenuActivity")]
     public class MenuActivity : Activity
     {
-        private List<string> listItem;
         private ListView exerciseList;
-        
         //
         DrawerLayout mDrawerLayout;
         List<string> mLeftItems = new List<string>();
@@ -29,7 +28,6 @@ namespace XamaAndrTest
         ArrayAdapter mRightAdapter;
         ListView mRightDrawer;
         ActionBarDrawerToggle mDrawerToggle;
-        
         //
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -37,14 +35,20 @@ namespace XamaAndrTest
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Menu);
 
-            listItem = new List<string>();
-            listItem.Add("Exercise 1");
-            listItem.Add("CardioDebug");
-            listItem.Add("Exercise 3");
+            List<CatalogExercise> catalogExerciseList = new List<CatalogExercise>();
+            catalogExerciseList.Add(new CatalogExercise());
+            catalogExerciseList.Add(new CatalogExercise());
+            catalogExerciseList.Add(new CatalogExercise());
+
+            catalogExerciseList[0].Type = "Силовуха 1";
+            catalogExerciseList[1].Type = "Кардио!";
+            catalogExerciseList[1].Type = "Силовуха 2";
+
+            var result = catalogExerciseList.Select(l => l.Type).ToList();
 
             exerciseList = FindViewById<ListView>(Resource.Id.exerciseList);
-
-            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItemMultipleChoice, listItem);
+            
+            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItemMultipleChoice, result);
             exerciseList.Adapter = adapter;
             exerciseList.ChoiceMode = ChoiceMode.Multiple;
             

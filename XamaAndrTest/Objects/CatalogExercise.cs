@@ -123,5 +123,10 @@ namespace XamaAndrTest.Objects
             this._calorificValue = _calorificValue;
             this._parameters = _parameters;
         }
+
+        public CatalogExercise()
+        {
+
+        }
     }
 }
