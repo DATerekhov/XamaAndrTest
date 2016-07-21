@@ -50,19 +50,16 @@ namespace XamaAndrTest
             
             exerciseList.ItemClick += delegate
             {
-                switch (exerciseList.SelectedItemPosition) {
-                    case 1:
-                        {
-                            Intent intern1 = new Intent(this, typeof(CardioExerciseActivity));
-                            StartActivity(intern1);
-                            break;
-                        }
-                    default:
-                        {
-                            Intent intern = new Intent(this, typeof(CardioExerciseActivity));
-                            StartActivity(intern);
-                            break;
-                        }
+                var checkedList = exerciseList.CheckedItemPositions;
+                if(checkedList.Get(1))
+                {
+                    Intent intern1 = new Intent(this, typeof(CardioExerciseActivity));
+                    StartActivity(intern1);
+                }
+                else
+                {
+                    Intent intern = new Intent(this, typeof(PrepareActivity));
+                    StartActivity(intern);
                 }
                 
             };
